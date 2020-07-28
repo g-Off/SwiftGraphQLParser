@@ -114,7 +114,6 @@ public func parse(_ input: String) throws -> Document {
 			definitions.append(definition)
 		}
 	} catch let error as InternalParserError {
-		print(ParserError(type: error.type, errorRange: error.errorRange, input: input, contextualStart: error.contextualStart, contextualEnd: error.contextualEnd).errorDescription!)
 		throw ParserError(type: error.type, errorRange: error.errorRange, input: input, contextualStart: error.contextualStart, contextualEnd: error.contextualEnd)
 	}
 	
